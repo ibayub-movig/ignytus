@@ -1,6 +1,6 @@
 "use client"
 
-import { Flame, ArrowRight, Sparkles, Target, Building2, MessageSquareMore, Rocket, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { Flame, Tag, Search, MessageSquare, ArrowRight, Sparkles, Target, Building2, MessageSquareMore, Rocket, CheckCircle2, ArrowUpRight } from "lucide-react";
 import { QuickSignup } from "@/components/quick-signup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,12 +27,12 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-              Connect with Purpose-Driven Startups
+              Craft a purpose-driven career on your terms 
             </h1>
 
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              Join a community of innovators building companies that make a difference. Find your next role or start your own venture.
+              Find and connect with impact-driven startups. Or start your own
             </p>
 
             {/* Early Access Form */}
@@ -43,57 +43,171 @@ export default function Home() {
             {/* Social Proof */}
             <div className="flex items-center gap-3 text-muted-foreground mt-8">
               <Sparkles className="w-5 h-5" />
-              <p>Join 200+ purpose-driven professionals</p>
+              <p>AI where it counts</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
+      {/* Problem Section */}
       <section className="py-24 bg-background px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">The Challenge</h2>
-              <div className="space-y-4">
-                <p className="text-lg text-muted-foreground">Finding truly impactful work shouldn&apos;t be this hard. Yet many face:</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="bg-destructive/10 p-1 rounded-full mt-1">
-                      <span className="block w-2 h-2 bg-destructive rounded-full" />
-                    </span>
-                    <p>Difficulty finding impactful companies beyond nonprofits</p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="bg-destructive/10 p-1 rounded-full mt-1">
-                      <span className="block w-2 h-2 bg-destructive rounded-full" />
-                    </span>
-                    <p>Application black holes and endless research</p>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="bg-destructive/10 p-1 rounded-full mt-1">
-                      <span className="block w-2 h-2 bg-destructive rounded-full" />
-                    </span>
-                    <p>Overwhelming process to start your own venture</p>
-                  </li>
-                </ul>
+          {/* Problem Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
+              Finding meaningful work shouldn't be a full-time job itself.
+            </h2>
+          </div>
+          
+          {/* Problem Columns */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+                        {/* Column 3: Fit Mismatch */}
+                        <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+              <div className="bg-pink-50 p-6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">⚖️</div>
+                </div>
               </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Fit Mismatch</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Struggle to find where both skills AND values align</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Forced to choose between career growth and impact</p>
+                </li>
+              </ul>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Our Approach</h2>
-              <p className="text-lg text-muted-foreground">Meaningful roles aren&apos;t found through application portals. They&apos;re formed through relationships or built from scratch.</p>
-              <div className="space-y-4">
+            {/* Column 1: Time Wasted */}
+            <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+                <div className="bg-pink-50 p-6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">⏱️</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Time Wasted</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Endless hours spent researching companies</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Sifting through generic job boards with no focus on impact</p>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Column 2: Missed Opportunities */}
+            <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+              <div className="bg-pink-50 p-6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">🔍</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Missed Opportunities</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Hidden impact roles never reach job boards</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                    <span className="block w-2 h-2 bg-destructive rounded-full" />
+                  </span>
+                  <p>Roles filled through relationships, not applications</p>
+                </li>
+              </ul>
+            </div>
+            
+
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-24 bg-background/50 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Divider/Transition */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
+              Where Purpose Meets Opportunity
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We connect mission-driven talent with impact startups that share your values.
+            </p>
+          </div>
+          
+          {/* Solution Columns */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Column 1: Discover */}
+            <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+                <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">🎯</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Discover</h3>
+              <div className="space-y-3">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
                   <p>Find opportunities at companies aligned with your values</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Connect directly with decision-makers with insights to stand out</p>
+                  <p>Opportunities based on both your skills AND purpose</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Column 2: Connect */}
+            <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+                <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">🤝</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Connect</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
+                  <p>Connect directly with decision-makers</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Get the tools and support to bring your impact ideas to life</p>
+                  <p>Stand out with insights that matter</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Column 3: Build */}
+            <div className="space-y-4 text-left">
+              <div className="flex justify-center mb-6">
+                <div className="bg-primary/10 p6 rounded-full flex items-center justify-center w-16 h-16">
+                  <div className="text-2xl">🌱</div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Build</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
+                  <p>Build relationships that lead to roles crafted around your strengths</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
+                  <p>Get tools and support to bring your impact ideas to life</p>
                 </div>
               </div>
             </div>
@@ -101,34 +215,163 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 bg-secondary/30 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-center mb-12">How We Help You Make an Impact</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="p-6 space-y-4 bg-background/60 backdrop-blur">
-              <Target className="w-10 h-10 text-primary" />
-              <h3 className="text-xl font-semibold">Define Your North Star</h3>
-              <p className="text-muted-foreground">Clarify your unique combination of skills, values, and impact areas</p>
-            </Card>
-            <Card className="p-6 space-y-4 bg-background/60 backdrop-blur">
-              <Building2 className="w-10 h-10 text-primary" />
-              <h3 className="text-xl font-semibold">Discover Mission-Aligned Startups</h3>
-              <p className="text-muted-foreground">Get matched with values-aligned companies using real-world signals</p>
-            </Card>
-            <Card className="p-6 space-y-4 bg-background/60 backdrop-blur">
-              <MessageSquareMore className="w-10 h-10 text-primary" />
-              <h3 className="text-xl font-semibold">Connect & Stand Out</h3>
-              <p className="text-muted-foreground">Reach out to the right people with insights on shared missions</p>
-            </Card>
-            <Card className="p-6 space-y-4 bg-background/60 backdrop-blur">
-              <Rocket className="w-10 h-10 text-primary" />
-              <h3 className="text-xl font-semibold">Impact Idea Builder</h3>
-              <p className="text-muted-foreground">Access tools to bring your ideas to life in days</p>
-            </Card>
+      <section className="py-24 bg-white px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
+            How We Help You Make an Impact
+          </h2>
+        </div>
+        
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* Feature 1: North Star Definition */}
+          <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-all">
+            <div className="mb-5">
+              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <Target className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">North Star Definition</h3>
+            <p className="text-gray-600 mb-6">
+              Clarify your unique combo of skills and values
+            </p>
+            
+            {/* Visual: Tags */}
+            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+              <p className="text-sm text-gray-500 mb-3">Your Impact Areas & Skills</p>
+              <div className="flex flex-wrap gap-2">
+                <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm flex items-center">
+                  <Tag className="w-3 h-3 mr-1" />
+                  Sustainability
+                </div>
+                <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm flex items-center">
+                  <Tag className="w-3 h-3 mr-1" />
+                  Product Management
+                </div>
+                <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm flex items-center">
+                  <Tag className="w-3 h-3 mr-1" />
+                  Clean Energy
+                </div>
+                <div className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm flex items-center">
+                  <Tag className="w-3 h-3 mr-1" />
+                  UX Design
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Feature 2: Opportunity Fit */}
+          <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-all">
+            <div className="mb-5">
+              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <Search className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Opportunity Fit</h3>
+            <p className="text-gray-600 mb-6">
+              Discover value aligned companies
+            </p>
+            
+            {/* Visual: Startup list */}
+            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+              <div className="flex justify-between items-center mb-3">
+                <p className="text-sm text-gray-500">Impact Aligned Startups</p>
+                <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded-md text-xs font-medium">10</span>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="border-l-4 border-green-500 pl-3 py-1">
+                  <p className="font-medium text-sm">4 actively hiring product managers</p>
+                </div>
+                <div className="border-l-4 border-blue-500 pl-3 py-1">
+                  <p className="font-medium text-sm">6 likely looking for your skillset</p>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs">recently raised</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs">announced new product</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Feature 3: Outreach & Positioning */}
+          <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-all">
+            <div className="mb-5">
+              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <MessageSquare className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Outreach & Positioning</h3>
+            <p className="text-gray-600 mb-6">
+              Reach out to the right people with personalized insights
+            </p>
+            
+            {/* Visual: Personalized message */}
+            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">JD</div>
+                <div>
+                  <p className="font-medium text-sm">Jane Doe, CTO</p>
+                  <p className="text-xs text-gray-500">ClimateOS</p>
+                </div>
+              </div>
+              
+              <div className="p-3 bg-white border border-gray-200 rounded-lg">
+                <p className="text-sm">
+                  <span className="font-bold">Personalized message:</span> "I noticed your recent article on product-led climate solutions. Your approach to carbon tracking aligns with my work at..."
+                </p>
+              </div>
+            </div>
+          </div>
+          
+       {/* Feature 4: Impact Incubation */}
+       <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-all relative">
+            <div className="absolute top-3 right-3">
+              <span className="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">New</span>
+            </div>
+            <div className="mb-5">
+              <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
+                <Rocket className="w-6 h-6 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Impact Incubation</h3>
+            <p className="text-gray-600 mb-6">
+              Access tools to bring your ideas to life
+            </p>
+            
+            {/* Visual: Toolkit steps */}
+            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+              <p className="text-sm text-gray-500 mb-3">Startup Toolkit</p>
+              
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">1</div>
+                  <p className="text-sm">Problem validation</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">2</div>
+                  <p className="text-sm">Solution design</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">3</div>
+                  <p className="text-sm">User testing</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">4</div>
+                  <p className="text-sm">MVP development</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">5</div>
+                  <p className="text-sm">Launch strategy</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Paths Section */}
       <section className="py-24 bg-background px-4">
