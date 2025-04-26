@@ -26,7 +26,7 @@ export default function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80 pb-2" style={{display: 'inline-block' }}>
               Craft a purpose-driven career on your terms 
             </h1>
 
@@ -43,7 +43,7 @@ export default function Home() {
             {/* Social Proof */}
             <div className="flex items-center gap-3 text-muted-foreground mt-8">
               <Sparkles className="w-5 h-5" />
-              <p>AI where it counts</p>
+              <p>Tech & AI for social good</p>
             </div>
           </div>
         </div>
@@ -57,12 +57,36 @@ export default function Home() {
       {/* Left column: Heading */}
       <div>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
-          Finding meaningful work shouldn&apos;t be a full-time job itself.
+          Finding meaningful work shouldn&apos;t be its own full-time job.
         </h2>
       </div>
       
       {/* Right column: Problems list */}
       <div className="space-y-8">
+
+      <div className="flex items-start gap-5">
+        <div className="bg-pink-50 rounded-full flex items-center justify-center w-12 h-12 flex-shrink-0">
+            <div className="text-xl text-pink-500">⚖️</div>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Fit Mismatch</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                  <span className="block w-2 h-2 bg-destructive rounded-full" />
+                </span>
+                <p>Generic job boards</p>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="bg-destructive/10 p-1 rounded-full mt-1">
+                  <span className="block w-2 h-2 bg-destructive rounded-full" />
+                </span>
+                <p>Tradeoffs between impact and career growth</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="flex items-start gap-5">
         <div className="bg-pink-50 rounded-full flex items-center justify-center w-12 h-12 flex-shrink-0">
             <div className="text-xl text-pink-500">⏱️</div>
@@ -74,13 +98,13 @@ export default function Home() {
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Endless hours spent researching companies</p>
+                <p>Endless research on companies</p>
               </li>
               <li className="flex items-start gap-3">
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Sifting through generic job boards with no focus on impact</p>
+                <p>Application blackholes</p>
               </li>
             </ul>
           </div>
@@ -97,40 +121,19 @@ export default function Home() {
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Hidden impact roles never reach job boards</p>
+                <p>Roles filled through relationships, not apps</p>
               </li>
               <li className="flex items-start gap-3">
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Roles filled through relationships, not applications</p>
+                <p>Informal opportunities for startups</p>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="flex items-start gap-5">
-        <div className="bg-pink-50 rounded-full flex items-center justify-center w-12 h-12 flex-shrink-0">
-            <div className="text-xl text-pink-500">⚖️</div>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-2">Fit Mismatch</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <span className="bg-destructive/10 p-1 rounded-full mt-1">
-                  <span className="block w-2 h-2 bg-destructive rounded-full" />
-                </span>
-                <p>Struggle to find where both skills AND values align</p>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="bg-destructive/10 p-1 rounded-full mt-1">
-                  <span className="block w-2 h-2 bg-destructive rounded-full" />
-                </span>
-                <p>Forced to choose between career growth and impact</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -141,17 +144,17 @@ export default function Home() {
     {/* Solution Header */}
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
-        Where Purpose Meets Opportunity
+        Where purpose meets opportunity
       </h2>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        We&apos;re reimagining how impact-driven professionals find meaningful work by focusing on relationships, not applications.
+        We&apos;re reimagining how impact-driven professionals find meaningful work by focusing on fit and relationships, not applications.
       </p>
     </div>
     
     {/* Solution Columns */}
-    <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
+    <div className="grid md:grid-cols-3 gap-8 mb-16">
       {/* Solution 1: Perfect Fit */}
-      <div className="bg-white rounded-xl p-6 shadow-sm text-center">
+      <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
             <CheckCircle2 className="w-7 h-7 text-primary" />
@@ -159,34 +162,33 @@ export default function Home() {
         </div>
         <h3 className="text-xl font-semibold mb-4">Find your perfect fit</h3>
         <p className="text-muted-foreground">
-          Our matching process prioritizes both skill and value alignment, so you never have to choose between career growth and impact.
+          Discover startups and opportunities based on your values and skills 
         </p>
       </div>
       
       {/* Solution 2: Save Time */}
-      <div className="bg-white rounded-xl p-6 shadow-sm text-center">
+      <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
             <CheckCircle2 className="w-7 h-7 text-primary" />
           </div>
         </div>
-        <h3 className="text-xl font-semibold mb-4">Save countless hours</h3>
+        <h3 className="text-xl font-semibold mb-4">Skip the grunt work</h3>
         <p className="text-muted-foreground">
-          Our curated network of vetted impact startups eliminates endless searching through generic job boards or researching company missions.
+          Access insights and connections to the right people with our AI trained on social impact
         </p>
       </div>
       
       {/* Solution 3: Hidden Opportunities */}
-      <div className="bg-white rounded-xl p-6 shadow-sm text-center">
+      <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
           <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
             <CheckCircle2 className="w-7 h-7 text-primary" />
           </div>
         </div>
-        <h3 className="text-xl font-semibold mb-4">Access hidden opportunities</h3>
+        <h3 className="text-xl font-semibold mb-4">Uncover hidden opportunities </h3>
         <p className="text-muted-foreground">
-          Connect directly with founders and decision-makers at impact startups, opening doors to roles that never hit job boards.
-        </p>
+          Use real-time signals to find startups that need people like you</p>
       </div>
     </div>
 
@@ -194,90 +196,12 @@ export default function Home() {
 </section>
       
 
-      {/* Solution Section */}
-      <section className="py-24 bg-background/50 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Divider/Transition */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
-              Where Purpose Meets Opportunity
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We connect mission-driven talent with impact startups that share your values.
-            </p>
-          </div>
-          
-          {/* Solution Columns */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Column 1: Discover */}
-            <div className="space-y-4 text-left">
-              <div className="flex justify-center mb-6">
-                <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center w-16 h-16">
-                  <div className="text-2xl">🎯</div>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-center mb-4">Discover</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Find opportunities at companies aligned with your values</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Opportunities based on both your skills AND purpose</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Column 2: Connect */}
-            <div className="space-y-4 text-left">
-              <div className="flex justify-center mb-6">
-                <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center w-16 h-16">
-                  <div className="text-2xl">🤝</div>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-center mb-4">Connect</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Connect directly with decision-makers</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Stand out with insights that matter</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Column 3: Build */}
-            <div className="space-y-4 text-left">
-              <div className="flex justify-center mb-6">
-                <div className="bg-primary/10 p6 rounded-full flex items-center justify-center w-16 h-16">
-                  <div className="text-2xl">🌱</div>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-center mb-4">Build</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Build relationships that lead to roles crafted around your strengths</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary mt-1" />
-                  <p>Get tools and support to bring your impact ideas to life</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 bg-white px-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">
-            How We Help You Make an Impact
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+            Toolkit to ignite your impact
           </h2>
         </div>
         
@@ -413,15 +337,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">3</div>
-                  <p className="text-sm">User testing</p>
+                  <p className="text-sm">Impact measurement</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">4</div>
                   <p className="text-sm">MVP development</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-xs">5</div>
-                  <p className="text-sm">Launch strategy</p>
                 </div>
               </div>
             </div>
@@ -438,7 +358,6 @@ export default function Home() {
             <Card className="p-8 space-y-6">
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 Land Your Next Job
-                <ArrowUpRight className="w-5 h-5" />
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -454,12 +373,16 @@ export default function Home() {
                   <p>Company insights to demonstrate your fit</p>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full">Learn More</Button>
+              <Button variant="outline" className="w-full" asChild>
+                <Link href="/early-access">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
             </Card>
             <Card className="p-8 space-y-6">
               <h3 className="text-2xl font-semibold flex items-center gap-2">
                 Create Your Venture
-                <ArrowUpRight className="w-5 h-5" />
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -475,7 +398,12 @@ export default function Home() {
                   <p>Hands-on support and guidance</p>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full">Learn More</Button>
+              <Button variant="outline" className="w-full" asChild>
+                <Link href="/early-access">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
             </Card>
           </div>
         </div>
@@ -485,13 +413,13 @@ export default function Home() {
       <section className="py-24 px-4 bg-gradient-to-br from-primary/5 via-primary/10 to-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Startup looking for talent?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Are you a startup looking for talent?</h2>
             <p className="text-xl text-muted-foreground">
-              Join our curated directory of impact-driven companies and connect with mission-aligned professionals who share your vision for positive change.
+              Connect with mission-aligned professionals who share your vision for positive change.
             </p>
             <Button size="lg" asChild>
               <Link href="/company-signup">
-                List Your Company
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
