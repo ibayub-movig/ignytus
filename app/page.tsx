@@ -57,7 +57,7 @@ export default function Home() {
       {/* Left column: Heading */}
       <div>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
-          Finding meaningful work shouldn't be a full-time job itself.
+          Finding meaningful work shouldn&apos;t be a full-time job itself.
         </h2>
       </div>
       
@@ -144,7 +144,7 @@ export default function Home() {
         Where Purpose Meets Opportunity
       </h2>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        We're reimagining how impact-driven professionals find meaningful work by focusing on relationships, not applications.
+        We&apos;re reimagining how impact-driven professionals find meaningful work by focusing on relationships, not applications.
       </p>
     </div>
     
@@ -377,7 +377,7 @@ export default function Home() {
               
               <div className="p-3 bg-white border border-gray-200 rounded-lg">
                 <p className="text-sm">
-                  <span className="font-bold">Personalized message:</span> "I noticed your recent article on product-led climate solutions. Your approach to carbon tracking aligns with my work at..."
+                  <span className="font-bold">Personalized message:</span> &quot;I noticed your recent article on product-led climate solutions. Your approach to carbon tracking aligns with my work at...&quot;
                 </p>
               </div>
             </div>
