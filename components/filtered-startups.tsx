@@ -92,34 +92,27 @@ export function FilteredStartups({ startups, initialAreas = [] }: FilteredStartu
               className="flex"
             >
               <Card className="overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02] flex flex-col w-full">
-                <div 
-                  className="h-48 bg-cover bg-center relative before:absolute before:inset-0 before:bg-black/40" 
-                  style={{ backgroundImage: `url(${startup.imageUrl})` }}
-                >
-                  <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                    <div className="flex flex-wrap gap-1.5 justify-end">
-                      {startup.impactAreas.map((area) => (
-                        <Badge key={area} variant="secondary" className="bg-black/50 backdrop-blur-sm text-white border-0">
-                          {area}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-xl text-white mb-2">{startup.name}</h3>
-                      <div className="flex items-center gap-2 text-white/80 text-sm">
-                        <MapPin className="h-4 w-4" />
-                        {startup.location}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 space-y-4 flex-1 flex flex-col">
+                <div className="p-6 flex flex-col gap-4">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden bg-cover bg-center" 
+                    style={{ backgroundImage: `url(${startup.imageUrl})` }}
+                  />
                   <div className="space-y-2">
-                    <p className="text-muted-foreground line-clamp-2">
-                      {startup.description}
-                    </p>
+                    <h3 className="font-semibold text-xl">{startup.name}</h3>
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                      <MapPin className="h-4 w-4" />
+                      {startup.location}
+                    </div>
                   </div>
-
+                  <div className="flex flex-wrap gap-1.5">
+                    {startup.impactAreas.map((area) => (
+                      <Badge key={area} variant="secondary">
+                        {area}
+                      </Badge>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground line-clamp-2">
+                    {startup.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {(startup.tags || []).map((tag) => (
                       <Badge key={tag} variant="secondary">
@@ -127,8 +120,7 @@ export function FilteredStartups({ startups, initialAreas = [] }: FilteredStartu
                       </Badge>
                     ))}
                   </div>
-
-                  <div className="mt-auto -mx-6 -mb-6 bg-secondary/50 p-4">
+                  <div className="mt-auto pt-4 border-t">
                     <div className="flex items-center gap-2">
                       <div className={`w-2 h-2 rounded-full ${
                         startup.opportunityType === 'Actively Hiring' 

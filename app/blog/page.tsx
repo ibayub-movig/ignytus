@@ -8,8 +8,8 @@ const posts = [
     title: "Building a Purpose-Driven Career in Tech",
     slug: "purpose-driven-career",
     excerpt: "Discover how to align your technical skills with meaningful impact and find fulfilling work in the startup ecosystem.",
-    date: "March 15, 2024",
-    readTime: "5 min read"
+    date: "May 5, 2025",
+    readTime: "2 min read"
   }
 ];
 

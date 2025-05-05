@@ -14,7 +14,7 @@ async function getStartups() {
   }
 
   const response = await fetch(
-    `https://api.airtable.com/v0/${baseId}/Companies?filterByFormula=FIND("Website",Display)`,
+    `https://api.airtable.com/v0/${baseId}/Companies?view=Finalized`,
     {
       headers: {
         Authorization: `Bearer ${apiKey}`,

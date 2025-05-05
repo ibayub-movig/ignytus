@@ -76,17 +76,17 @@ export default function EarlyAccessPage() {
               </div>
               <h1 className="text-4xl font-bold tracking-tighter">You&apos;re In!</h1>
               <p className="text-xl text-muted-foreground">
-                Thanks for joining! We&apos;ll be in touch soon with your early access invite.
+                Thanks for joining! We&apos;ll be in touch soon.
               </p>
             </div>
           ) : (
             <div className="space-y-12">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
-                  Get Early Access
+                  Ignite your Impact
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Join a community of purpose-driven professionals building the future.
+                  Where purpose meets opportunity.
                 </p>
               </div>
 
@@ -96,14 +96,14 @@ export default function EarlyAccessPage() {
                     <Rocket className="w-6 h-6" />
                   </div>
                   <h3 className="font-semibold">First Access</h3>
-                  <p className="text-sm text-muted-foreground">Be among the first to discover opportunities</p>
+                  <p className="text-sm text-muted-foreground">Shape the platform to your needs</p>
                 </div>
                 <div className="space-y-2">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
                     <Users className="w-6 h-6" />
                   </div>
                   <h3 className="font-semibold">Exclusive Network</h3>
-                  <p className="text-sm text-muted-foreground">Connect with mission-aligned peers</p>
+                  <p className="text-sm text-muted-foreground">Connect with mission-aligned peers and startups</p>
                 </div>
                 <div className="space-y-2">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
@@ -191,7 +191,7 @@ export default function EarlyAccessPage() {
                       </>
                     ) : (
                       <>
-                        Join the Waitlist
+                        Get Early Access
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </>
                     )}

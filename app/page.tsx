@@ -301,7 +301,7 @@ export default function Home() {
               
               <div className="p-3 bg-white border border-gray-200 rounded-lg">
                 <p className="text-sm">
-                  <span className="font-bold">Personalized message:</span> &quot;I noticed your recent article on product-led climate solutions. Your approach to carbon tracking aligns with my work at...&quot;
+                  <span className="font-bold">Draft message:</span> &quot;I noticed your recent article on product-led climate solutions. Your approach to carbon tracking aligns with my work at...&quot;
                 </p>
               </div>
             </div>

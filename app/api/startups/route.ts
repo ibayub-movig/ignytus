@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 0; // Disable caching
 
 export async function GET() {
   try {
@@ -12,13 +12,14 @@ export async function GET() {
     }
 
     const response = await fetch(
-      `https://api.airtable.com/v0/${baseId}/Companies?filterByFormula=FIND("Website",Display)`,
+      `https://api.airtable.com/v0/${baseId}/Companies?view=Finalized`,
       {
         headers: {
           Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
         },
-        next: { revalidate: 3600 },
+        next: { revalidate: 0 }, // Disable caching for this specific request
+        cache: 'no-store', // Ensure no caching
       }
     );
 
@@ -27,6 +28,11 @@ export async function GET() {
     }
 
     const data = await response.json();
+    
+    console.log('Airtable response:', {
+      recordCount: data.records?.length,
+      firstRecord: data.records?.[0]?.fields
+    });
     
     if (!data.records) {
       throw new Error('Invalid response format from Airtable');

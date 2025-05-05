@@ -15,7 +15,7 @@ export function Footer() {
               <span>Ignyt</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Connecting purpose-driven professionals with impact startups.
+              Where purpose meets opportunity.
             </p>
           </div>
 
