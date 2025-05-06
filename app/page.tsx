@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { JSX } from "react";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
@@ -311,7 +312,7 @@ export default function Home() {
        {/* Feature 4: Impact Incubation */}
        <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm hover:shadow-md transition-all relative">
             <div className="absolute top-3 right-3">
-              <span className="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">New</span>
+              <span className="bg-[#14b8a6] text-white text-xs font-bold px-2 py-1 rounded-full">New</span>
             </div>
             <div className="mb-5">
               <div className="bg-black rounded-full w-12 h-12 flex items-center justify-center">
@@ -463,7 +464,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Are all the companies actively hiring?</h3>
-              <p className="text-muted-foreground">While we prioritize companies with active posts, we&apos;ve found that most startups either don&apos;t have updated job posts or create positions based on fit.</p>
+              <p className="text-muted-foreground">While we prioritize companies with active posts, we&apos;ve found that many startups either don&apos;t have updated job posts or create positions based on fit, so we also look at recent signals and activity to help match startup needs to your skillset.</p>
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Do I have to choose between joining a company or starting my own?</h3>
@@ -471,7 +472,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">What are the costs?</h3>
-              <p className="text-muted-foreground">We offer both free and premium tiers. Get early access now to be the first to know about our pricing and features.</p>
+              <p className="text-muted-foreground">We plan to offer both free and premium tiers. Sign up for early access to shape the platform and get priority access to features.</p>
             </div>
           </div>
         </div>

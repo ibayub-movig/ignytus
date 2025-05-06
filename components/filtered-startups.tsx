@@ -53,7 +53,7 @@ export function FilteredStartups({ startups, initialAreas = [] }: FilteredStartu
             <div className="flex gap-2">
               <Badge
                 variant={selectedOpportunityType === 'Actively Hiring' ? 'default' : 'secondary'}
-                className="cursor-pointer hover:opacity-80 transition-opacity"
+                className="cursor-pointer hover:opacity-80 transition-opacity text-sm py-1.5"
                 onClick={() => setSelectedOpportunityType(
                   selectedOpportunityType === 'Actively Hiring' ? null : 'Actively Hiring'
                 )}
@@ -61,10 +61,10 @@ export function FilteredStartups({ startups, initialAreas = [] }: FilteredStartu
                 Actively Hiring
               </Badge>
               <Badge
-                variant={selectedOpportunityType === 'Looking for' ? 'default' : 'secondary'}
-                className="cursor-pointer hover:opacity-80 transition-opacity"
+                variant={selectedOpportunityType === 'Likely Looking' ? 'default' : 'secondary'}
+                className="cursor-pointer hover:opacity-80 transition-opacity text-sm py-1.5"
                 onClick={() => setSelectedOpportunityType(
-                  selectedOpportunityType === 'Looking for' ? null : 'Looking for'
+                  selectedOpportunityType === 'Likely Looking' ? null : 'Likely Looking'
                 )}
               >
                 Likely Looking
@@ -132,7 +132,7 @@ export function FilteredStartups({ startups, initialAreas = [] }: FilteredStartu
                           ? 'text-primary'
                           : 'text-muted-foreground'
                       }`}>
-                        {startup.opportunityType === 'Actively Hiring' ? 'Actively Hiring' : 'Likely Looking'}
+                        {startup.opportunityType}
                       </span>
                     </div>
                     

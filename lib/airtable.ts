@@ -5,7 +5,7 @@ export interface Startup {
   description: string;
   companyUrl: string;
   location: string;
-  opportunityType: 'Actively Hiring' | 'Looking for';
+  opportunityType: 'Actively Hiring' | 'Likely Looking';
   opportunities: string[];
   impactAreas: string[];
   imageUrl: string;

@@ -39,7 +39,7 @@ async function getStartups() {
     description: record.fields.description || '',
     companyUrl: record.fields.companyUrl || '',
     location: record.fields.location || '',
-    opportunityType: record.fields.opportunityType || 'Looking for',
+    opportunityType: record.fields.opportunityType || 'Likely Looking',
     opportunities: Array.isArray(record.fields.opportunities) ? record.fields.opportunities : [],
     impactAreas: record.fields.impactAreas || [],
     imageUrl: record.fields.imageUrl || 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
