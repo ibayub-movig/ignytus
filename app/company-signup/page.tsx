@@ -87,7 +87,7 @@ export default function CompanySignupPage() {
             <div className="space-y-12">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
-                  List Your Impact Company
+                  Acceleraete your impact
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   Connect with purpose-driven professionals who align with your mission.
@@ -106,7 +106,7 @@ export default function CompanySignupPage() {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
                     <Users className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold">Find Aligned Talent</h3>
+                  <h3 className="font-semibold">Find Talent</h3>
                   <p className="text-sm text-muted-foreground">Connect with professionals who share your values</p>
                 </div>
                 <div className="space-y-2">
@@ -206,7 +206,7 @@ export default function CompanySignupPage() {
                       </>
                     ) : (
                       <>
-                        Submit Application
+                        Submit
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </>
                     )}

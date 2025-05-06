@@ -5,6 +5,7 @@ import { QuickSignup } from "@/components/quick-signup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { JSX } from "react";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              Find and connect with impact-driven startups. Or start your own
+              Discover mission-aligned startups. Or launch your own
             </p>
 
             {/* Early Access Form */}
@@ -156,8 +157,8 @@ export default function Home() {
       {/* Solution 1: Perfect Fit */}
       <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
-          <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
-            <CheckCircle2 className="w-7 h-7 text-primary" />
+          <div className="bg-[#14b8a6]/10 rounded-full flex items-center justify-center w-16 h-16">
+            <CheckCircle2 className="w-7 h-7 text-[#14b8a6]" />
           </div>
         </div>
         <h3 className="text-xl font-semibold mb-4">Find your perfect fit</h3>
@@ -169,8 +170,8 @@ export default function Home() {
       {/* Solution 2: Save Time */}
       <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
-          <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
-            <CheckCircle2 className="w-7 h-7 text-primary" />
+          <div className="bg-[#14b8a6]/10 rounded-full flex items-center justify-center w-16 h-16">
+            <CheckCircle2 className="w-7 h-7 text-[#14b8a6]" />
           </div>
         </div>
         <h3 className="text-xl font-semibold mb-4">Skip the grunt work</h3>
@@ -182,8 +183,8 @@ export default function Home() {
       {/* Solution 3: Hidden Opportunities */}
       <div className="bg-white rounded-xl p-6 shadow-md text-center">
         <div className="flex justify-center mb-6">
-          <div className="bg-blue-50 rounded-full flex items-center justify-center w-16 h-16">
-            <CheckCircle2 className="w-7 h-7 text-primary" />
+          <div className="bg-[#14b8a6]/10 rounded-full flex items-center justify-center w-16 h-16">
+            <CheckCircle2 className="w-7 h-7 text-[#14b8a6]" />
           </div>
         </div>
         <h3 className="text-xl font-semibold mb-4">Uncover hidden opportunities </h3>
@@ -361,19 +362,19 @@ export default function Home() {
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>Access hidden opportunities at impact startups</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>Direct connections to decision makers</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>Company insights to demonstrate your fit</p>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full" asChild>
+              <Button variant="teal-outline" className="w-full" asChild>
                 <Link href="/early-access">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -386,19 +387,19 @@ export default function Home() {
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>Frameworks to validate your idea</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>AI tools to build an MVP</p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[#14b8a6] mt-1" />
                   <p>Hands-on support and guidance</p>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full" asChild>
+              <Button variant="teal-outline" className="w-full" asChild>
                 <Link href="/early-access">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -417,7 +418,7 @@ export default function Home() {
             <p className="text-xl text-muted-foreground">
               Connect with mission-aligned professionals who share your vision for positive change.
             </p>
-            <Button size="lg" asChild>
+            <Button size="lg" variant="teal" asChild>
               <Link href="/company-signup">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -438,11 +439,14 @@ export default function Home() {
             </div>
             <Button 
               size="lg" 
+              variant="teal"
               className="mt-8"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              asChild
             >
-              Join Now
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="/early-access">
+                Join Now
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
           </div>
         </div>
