@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   title: 'Ignyt | crafting purpose-driven impactful careers',
   description: 'Join Ignyt to discover impact-driven startups, find meaningful work, or start your own venture making a difference.',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/icon.ico' },
+      { url: '/icon.ico', sizes: 'any' }
+    ],
+    shortcut: '/icon.ico',
+    apple: '/icon.ico',
   },
   alternates: {
     canonical: 'https://ignyt.com',
