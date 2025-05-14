@@ -10,6 +10,12 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Ignyt | crafting purpose-driven impactful careers',
   description: 'Join Ignyt to discover impact-driven startups, find meaningful work, or start your own venture making a difference.',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  alternates: {
+    canonical: 'https://ignyt.com',
+  },
 };
 
 export default function RootLayout({

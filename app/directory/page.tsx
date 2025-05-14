@@ -3,7 +3,7 @@ import type { Startup } from "@/lib/airtable";
 import { DirectoryError } from "@/components/directory-error";
 import { FilteredStartups } from "@/components/filtered-startups";
 
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 300; // Revalidate every 5 minutes
 
 async function getStartups() {
   const apiKey = process.env.AIRTABLE_API_KEY;
@@ -20,7 +20,7 @@ async function getStartups() {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
       },
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 }, // Revalidate every 5 minutes
     }
   );
 

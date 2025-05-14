@@ -123,13 +123,13 @@ export default function Home() {
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Roles filled through relationships, not apps</p>
+                <p>Tracking shifting needs of startups</p>
               </li>
               <li className="flex items-start gap-3">
                 <span className="bg-destructive/10 p-1 rounded-full mt-1">
                   <span className="block w-2 h-2 bg-destructive rounded-full" />
                 </span>
-                <p>Informal opportunities for startups</p>
+                <p>Finding informal startup opportunities</p>
               </li>
             </ul>
           </div>
@@ -149,7 +149,7 @@ export default function Home() {
         Where purpose meets opportunity
       </h2>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        We&apos;re reimagining how impact-driven professionals find meaningful work by focusing on fit and relationships, not applications.
+        We&apos;re reimagining how impact-driven professionals find meaningful work by focusing on values, fit, and relationships, not applications.
       </p>
     </div>
     
@@ -472,7 +472,7 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">What are the costs?</h3>
-              <p className="text-muted-foreground">We plan to offer both free and premium tiers. Sign up for early access to shape the platform and get priority access to features.</p>
+              <p className="text-muted-foreground">We have free and premium tiers based on your selected path. Sign up for early access to shape the platform and get priority access to features.</p>
             </div>
           </div>
         </div>
