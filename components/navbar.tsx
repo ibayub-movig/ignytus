@@ -21,9 +21,12 @@ export function Navbar() {
             <Link href="/blog" className="transition-colors hover:text-foreground/80">
               Blog
             </Link>
+            <Link href="/book-time" className="text-[#14b8a6] transition-colors hover:text-[#14b8a6]/80">
+              Book Time
+            </Link>
           </nav>
 
-          <Button className="hidden md:inline-flex">
+          <Button asChild className="hidden md:inline-flex">
             <Link href="/early-access">Get Early Access</Link>
           </Button>
 
@@ -43,10 +46,11 @@ export function Navbar() {
                 <Link href="/blog" className="text-lg font-medium">
                   Blog
                 </Link>
+                <Link href="/book-time" className="text-lg font-medium text-[#14b8a6]">
+                  Book Time
+                </Link>
                 <Button asChild className="mt-4">
-                  <Link href="/early-access">
-                  Get Early Access
-                  </Link>
+                  <Link href="/early-access">Get Early Access</Link>
                 </Button>
               </nav>
             </SheetContent>
