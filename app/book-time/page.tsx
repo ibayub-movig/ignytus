@@ -25,7 +25,7 @@ export default function BookTimePage() {
             Book a Time to Chat
           </h1>
           <p className="text-xl text-muted-foreground">
-            Let's discuss how we can help you build your purpose-driven career.
+            Let&apos;s discuss how we can help you build your purpose-driven career.
           </p>
         </div>
 
