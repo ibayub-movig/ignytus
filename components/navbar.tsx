@@ -15,19 +15,25 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="flex flex-1 items-center justify-end space-x-6">
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <Link href="/directory" className="transition-colors hover:text-foreground/80">
-              Directory
-            </Link>
-            <Link href="/blog" className="transition-colors hover:text-foreground/80">
-              Blog
-            </Link>
-            <Link href="/book-time" className="text-[#14b8a6] transition-colors hover:text-[#14b8a6]/80">
-              Book Time
+            <a
+              href="/companies"
+              className="nav-link"
+            >
+              Companies
+            </a>
+            <a
+              href="/jobs"
+              className="nav-link"
+            >
+              Jobs
+            </a>
+            <Link href="/resources" className="transition-colors hover:text-foreground/80">
+              Resources
             </Link>
           </nav>
 
           <Button asChild className="hidden md:inline-flex">
-            <Link href="/early-access">Get Early Access</Link>
+            <Link href="/subscribe">Subscribe</Link>
           </Button>
 
           {/* Mobile Navigation */}
@@ -40,17 +46,11 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4 mt-8">
-                <Link href="/directory" className="text-lg font-medium">
-                  Directory
-                </Link>
-                <Link href="/blog" className="text-lg font-medium">
-                  Blog
-                </Link>
-                <Link href="/book-time" className="text-lg font-medium text-[#14b8a6]">
-                  Book Time
+                <Link href="/resources" className="text-lg font-medium">
+                  Resources
                 </Link>
                 <Button asChild className="mt-4">
-                  <Link href="/early-access">Get Early Access</Link>
+                  <Link href="/subscribe">Subscribe</Link>
                 </Button>
               </nav>
             </SheetContent>

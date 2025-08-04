@@ -87,7 +87,7 @@ export default function CompanySignupPage() {
             <div className="space-y-12">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
-                  Acceleraete your impact
+                  Accelerate your impact
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   Connect with purpose-driven professionals who align with your mission.
@@ -169,7 +169,7 @@ export default function CompanySignupPage() {
                       <FormItem>
                         <FormLabel>Company Website</FormLabel>
                         <FormControl>
-                          <Input placeholder="google.com" {...field} />
+                          <Input placeholder="impact.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

@@ -24,7 +24,7 @@ export async function GET() {
     );
 
     if (!response.ok) {
-      throw new Error('Failed to fetch startups from Airtable');
+      throw new Error('Failed to fetch companies from Airtable');
     }
 
     const data = await response.json();
@@ -38,7 +38,7 @@ export async function GET() {
       throw new Error('Invalid response format from Airtable');
     }
     
-    const startups = data.records.map((record: any) => ({
+    const companies = data.records.map((record: any) => ({
       id: record.id,
       name: record.fields.name || '',
       description: record.fields.description || '',
@@ -51,11 +51,11 @@ export async function GET() {
       tags: Array.isArray(record.fields.tags) ? record.fields.tags : [],
     }));
 
-    return NextResponse.json(startups);
+    return NextResponse.json(companies);
   } catch (error) {
-    console.error('Failed to fetch startups:', error);
+    console.error('Failed to fetch companies:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Failed to fetch startups' },
+      { error: error instanceof Error ? error.message : 'Failed to fetch companies' },
       { status: 500 }
     );
   }

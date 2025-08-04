@@ -26,7 +26,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function EarlyAccessPage() {
+export default function SubscribePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -74,19 +74,19 @@ export default function EarlyAccessPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h1 className="text-4xl font-bold tracking-tighter">You&apos;re In!</h1>
+              <h1 className="text-4xl font-bold tracking-tighter">You&apos;re Subscribed!</h1>
               <p className="text-xl text-muted-foreground">
-                Thanks for joining! We&apos;ll be in touch soon.
+                Thanks for joining! We&apos;ll keep you updated on the latest opportunities.
               </p>
             </div>
           ) : (
             <div className="space-y-12">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tighter md:text-5xl">
-                  Ignite your Impact
+                  Stay Connected
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Where purpose meets opportunity.
+                  Get updates on impact opportunities and community events.
                 </p>
               </div>
 
@@ -95,22 +95,22 @@ export default function EarlyAccessPage() {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
                     <Rocket className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold">First Access</h3>
-                  <p className="text-sm text-muted-foreground">Shape the platform to your needs</p>
+                  <h3 className="font-semibold">Latest Opportunities</h3>
+                  <p className="text-sm text-muted-foreground">Be the first to know about new roles and ventures</p>
                 </div>
                 <div className="space-y-2">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
                     <Users className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold">Exclusive Network</h3>
-                  <p className="text-sm text-muted-foreground">Connect with mission-aligned peers and startups</p>
+                  <h3 className="font-semibold">Community Updates</h3>
+                  <p className="text-sm text-muted-foreground">Connect with mission-aligned peers and companies</p>
                 </div>
                 <div className="space-y-2">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-2">
                     <Sparkles className="w-6 h-6" />
                   </div>
-                  <h3 className="font-semibold">Premium Features</h3>
-                  <p className="text-sm text-muted-foreground">Get free access to premium tools</p>
+                  <h3 className="font-semibold">Exclusive Content</h3>
+                  <p className="text-sm text-muted-foreground">Access to insights and resources</p>
                 </div>
               </div>
 
@@ -187,11 +187,11 @@ export default function EarlyAccessPage() {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Submitting...
+                        Subscribing...
                       </>
                     ) : (
                       <>
-                        Get Early Access
+                        Subscribe
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </>
                     )}

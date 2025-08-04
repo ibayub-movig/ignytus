@@ -70,6 +70,9 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .theme {
+    --animate-shine: shine var(--duration) infinite linear;
+  }
 }
 
 @layer base {
@@ -78,5 +81,121 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Hero Background Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.4;
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(60px);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-100px) translateY(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px));
+  }
+}
+
+.hero-bg-blur {
+  background: radial-gradient(ellipse at center, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0.05) 50%, transparent 100%);
+}
+
+.floating-pulse {
+  animation: float 8s ease-in-out infinite, pulse 4s ease-in-out infinite;
+}
+
+.floating-pulse:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.floating-pulse:nth-child(3) {
+  animation-delay: -4s;
+}
+
+.floating-pulse:nth-child(4) {
+  animation-delay: -6s;
+}
+
+.glow-blob {
+  animation: glow 6s ease-in-out infinite;
+}
+
+.drifting-particle {
+  animation: drift 20s linear infinite;
+}
+
+.drifting-particle:nth-child(2) {
+  animation-delay: -5s;
+  animation-duration: 25s;
+}
+
+.drifting-particle:nth-child(3) {
+  animation-delay: -10s;
+  animation-duration: 30s;
+}
+
+/* Rotating Banner Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 0% 0%;
   }
 }

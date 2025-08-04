@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Loader2 } from "lucide-react";
 
-export function QuickSignup() {
+interface QuickSignupProps {
+  variant?: 'default' | 'hero';
+}
+
+export function QuickSignup({ variant = 'default' }: QuickSignupProps) {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -37,11 +41,11 @@ export function QuickSignup() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mt-8">
+      <form onSubmit={handleSubmit} className={`flex flex-col gap-3 w-full ${variant === 'hero' ? 'max-w-lg' : ''}`}>
         <Input 
           type="email" 
           placeholder="Enter your email" 
-          className="h-12"
+          className={variant === 'hero' ? 'h-14 text-lg' : 'h-11'}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isSubmitting || submitted}
@@ -49,8 +53,7 @@ export function QuickSignup() {
         />
         <Button 
           type="submit" 
-          size="lg" 
-          className="h-12 px-8" 
+          className={variant === 'hero' ? 'h-14 text-lg' : 'h-11'} 
           disabled={isSubmitting || submitted}
         >
           {isSubmitting ? (
@@ -62,7 +65,7 @@ export function QuickSignup() {
             "Thanks for joining!"
           ) : (
             <>
-              Get Early Access
+              Find good work 
               <ArrowRight className="ml-2 w-5 h-5" />
             </>
           )}

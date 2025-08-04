@@ -24,13 +24,8 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/directory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Directory
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Blog
+                <Link href="/resources" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Resources
                 </Link>
               </li>
             </ul>
@@ -41,7 +36,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Get Started</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/early-access" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/subscribe" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Job Seekers & Builders
                 </Link>
               </li>

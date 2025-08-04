@@ -1,77 +1,74 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
-    const { email, name, type = 'quick', role, companyName, companyUrl, notes } = await req.json();
+    const body = await req.json();
+    const {
+      email,
+      name,
+      firstName,
+      lastName,
+      source,
+      subscribed,
+      userGroup,
+      userId,
+      mailingLists,
+      role,
+      type
+    } = body;
 
     if (!email) {
-      return NextResponse.json({ error: 'Missing email' }, { status: 400 });
+      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
 
-    // Validate required fields based on signup type
-    if ((type === 'full' || type === 'company') && !name) {
-      return NextResponse.json({ error: 'Missing name' }, { status: 400 });
+    const payload: Record<string, any> = { email };
+    
+    // Handle name field - split if it's a full name
+    if (name) {
+      const nameParts = name.trim().split(' ');
+      if (nameParts.length > 1) {
+        payload.firstName = nameParts[0];
+        payload.lastName = nameParts.slice(1).join(' ');
+      } else {
+        payload.firstName = name;
+      }
+    }
+    
+    if (firstName) payload.firstName = firstName;
+    if (lastName) payload.lastName = lastName;
+    if (source) payload.source = source;
+    if (typeof subscribed === 'boolean') payload.subscribed = subscribed;
+    if (userGroup) payload.userGroup = userGroup;
+    if (userId) payload.userId = userId;
+    if (mailingLists) payload.mailingLists = mailingLists;
+    
+    // Map role to focus field for Loops
+    if (role) {
+      const focusMap: Record<string, string> = {
+        'job_seeker': 'jobs',
+        'founder': 'building'
+      };
+      payload.focus = focusMap[role] || role;
     }
 
-    if (type === 'company' && (!companyName || !companyUrl)) {
-      return NextResponse.json({ error: 'Missing required company information' }, { status: 400 });
-    }
-
-    const apiKey = process.env.AIRTABLE_API_KEY;
-    const baseId = process.env.AIRTABLE_BASE_ID;
-
-    if (!apiKey || !baseId) {
-      console.error('Missing Airtable configuration');
-      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
-    }
-
-    const apiUrl = `https://api.airtable.com/v0/${baseId}/Submissions`;
-
-    const airtable = await fetch(apiUrl, {
+    const res = await fetch('https://app.loops.so/api/v1/contacts/create', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${apiKey}`,
+        'Authorization': `Bearer ${process.env.LOOPS_API_KEY}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        records: [
-          { 
-            fields: { 
-              Email: email,
-              Name: name || '',
-              CompanyName: companyName || '',
-              CompanyUrl: companyUrl || '',
-              Notes: notes || '',
-              SignupType: type,
-              MainInterest: role === 'job_seeker' ? 'Jobs' : role === 'founder' ? 'Building' : null
-            } 
-          },
-        ],
-      }),
+      body: JSON.stringify(payload),
     });
 
-    if (!airtable.ok) {
-      const details = await airtable.json();
-      console.error('Airtable error:', {
-        status: airtable.status,
-        details,
-        email,
-        type
-      });
-      return NextResponse.json(
-        { error: 'Failed to save submission' },
-        { status: airtable.status }
-      );
+    if (!res.ok) {
+      const error = await res.json();
+      return NextResponse.json({ error: error.message || 'Failed to subscribe' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Subscribe endpoint error:', error);
-    return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 }
