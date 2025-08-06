@@ -27,6 +27,9 @@ export function Navbar() {
             >
               Jobs
             </a>
+            <Link href="/weekly-roundup" className="transition-colors hover:text-foreground/80">
+              Weekly Roundup
+            </Link>
             <Link href="/resources" className="transition-colors hover:text-foreground/80">
               Resources
             </Link>
@@ -46,6 +49,9 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4 mt-8">
+                <Link href="/weekly-roundup" className="text-lg font-medium">
+                  Weekly Roundup
+                </Link>
                 <Link href="/resources" className="text-lg font-medium">
                   Resources
                 </Link>

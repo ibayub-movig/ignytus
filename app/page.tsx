@@ -42,13 +42,13 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col items-center text-center space-y-8">
             {/* Logo */}
-            <div className="flex items-center gap-2 text-2xl font-bold text-primary">
+            <div className="flex items-center gap-2 text-2xl font-bold text-black">
               <Flame className="w-8 h-8" />
               <span>Ignyt</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80 pb-2" style={{display: 'inline-block' }}>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl text-black pb-2">
               Build a purpose-driven career
             </h1>
 

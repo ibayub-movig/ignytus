@@ -210,7 +210,7 @@ export function FilteredCompanies({ companies, initialAreas = [], searchQuery = 
             <h3 className="font-semibold">Tags</h3>
             <div className="flex gap-2">
               <Badge
-                variant={currentHiring === 'true' ? 'default' : 'secondary'}
+                variant={currentHiring === 'true' ? 'success' : 'secondary'}
                 className="cursor-pointer hover:opacity-80 transition-opacity text-sm py-1.5"
                 onClick={(e) => {
                   e.preventDefault();
@@ -270,7 +270,7 @@ export function FilteredCompanies({ companies, initialAreas = [], searchQuery = 
                 {/* Status Badges - Top Right */}
                 <div className="absolute top-3 right-3 z-10 flex gap-1">
                   {company.opportunityType === 'Actively Hiring' && (
-                    <Badge variant="default" className="text-xs px-2 py-1">
+                    <Badge variant="success" className="text-xs px-2 py-1">
                       <CheckCircle2 className="w-3 h-3 mr-1" />
                       Hiring
                     </Badge>
