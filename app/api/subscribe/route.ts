@@ -16,7 +16,10 @@ export async function POST(req: NextRequest) {
       userId,
       mailingLists,
       role,
-      type
+      type,
+      companyName,
+      companyUrl,
+      notes
     } = body;
 
     if (!email) {
@@ -51,6 +54,22 @@ export async function POST(req: NextRequest) {
         'founder': 'building'
       };
       payload.focus = focusMap[role] || role;
+    }
+
+    // Handle company signups
+    if (type === 'company') {
+      payload.userGroup = 'companies';
+      
+      // Store all company form data in details field
+      const companyDetails = {
+        companyName,
+        companyUrl,
+        notes,
+        signupDate: new Date().toISOString(),
+        source: 'company-signup'
+      };
+      
+      payload.details = JSON.stringify(companyDetails);
     }
 
     const res = await fetch('https://app.loops.so/api/v1/contacts/create', {

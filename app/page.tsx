@@ -1,13 +1,13 @@
 "use client"
 
 import { Flame, Tag, Search, MessageSquare, ArrowRight, Sparkles, Target, Building2, MessageSquareMore, Rocket, CheckCircle2, ArrowUpRight } from "lucide-react";
-import { QuickSignup } from "@/components/quick-signup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { JSX } from "react";
 import { Badge } from "@/components/ui/badge";
 import { RotatingCompaniesBanner } from "@/components/rotating-companies-banner";
+import { SupascribeEmbed } from "@/components/supascribe-embed";
 
 export default function Home() {
   return (
@@ -57,8 +57,8 @@ export default function Home() {
               Discover curated startups, roles, and tools for meaningful work
             </p>
 
-            {/* Early Access Form */}
-            <QuickSignup variant="hero" />
+            {/* Newsletter Signup */}
+            <SupascribeEmbed variant="hero" />
 
             {/* Secondary Explore Button */}
             <div className="mt-6">
@@ -74,6 +74,8 @@ export default function Home() {
       </section>
       {/* Rotating Companies Banner */}
       <RotatingCompaniesBanner />
+
+
 
 <section className="py-20 bg-background/50 px-4">
   <div className="max-w-7xl mx-auto">

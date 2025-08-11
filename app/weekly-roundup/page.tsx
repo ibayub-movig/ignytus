@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ExternalLink, Calendar, BookOpen, Image } from "lucide-react";
+import { SupascribeEmbed } from "@/components/supascribe-embed";
 
 interface SubstackPost {
   title: string;
@@ -140,17 +141,9 @@ export default function WeeklyRoundupPage() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Latest startups and opportunities to do well by doing good 
           </p>
-            <div className="mt-8 text-center">
-            <a 
-              href="https://ruminado.substack.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors"
-            >
-              Subscribe to Newsletter
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
+            <div className="mt-8 flex justify-center">
+              <SupascribeEmbed variant="default" />
+            </div>
         </div>
 
         {/* Content */}
@@ -266,15 +259,9 @@ export default function WeeklyRoundupPage() {
         {/* Footer CTA */}
         {!loading && posts.length > 0 && (
           <div className="mt-16 text-center p-8">
-            <a 
-              href="https://ruminado.substack.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors"
-            >
-              Subscribe to Newsletter
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+            <div className="flex justify-center">
+              <SupascribeEmbed variant="default" />
+            </div>
           </div>
         )}
       </div>
