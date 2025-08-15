@@ -44,7 +44,7 @@ export default function WeeklyRoundupPage() {
       setLoading(true);
       setError(null);
       
-      const feedUrl = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fruminado.substack.com%2Ffeed`;
+      const feedUrl = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fignyt.substack.com%2Ffeed`;
       const response = await fetch(feedUrl);
       
       if (!response.ok) {
@@ -59,7 +59,7 @@ export default function WeeklyRoundupPage() {
 
       // Filter posts that contain "Ignyt" in the title (case-insensitive)
       const ignytPosts = data.items.filter(item => 
-        item.title.toLowerCase().includes('ignyt')
+        item.title.toLowerCase().includes('weekly')
       );
 
       setPosts(ignytPosts);
